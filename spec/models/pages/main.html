@@ -1,0 +1,57 @@
+<html xmlns:math="http://exslt.org/math">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+      <title>Campus Portal</title>
+      <base href="https://campus.thompson.k12.co.us/campus/">
+      <link rel="shortcut icon" href="images/logos/campus.ico">
+      <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="Expires" content="-1"><script language="JavaScript">
+					function pushFocus()
+					{
+						frameDetail.focus();
+					}
+					
+					function addInProgressPanel(doc)
+					{
+						var d = doc.createElement('div');
+						d.id="inProgressPane";
+						d.className="freezeOn";
+
+						var tbl = doc.createElement("table");
+						var row = tbl.insertRow(-1);
+						var oi = doc.createElement("img");
+						oi.src= 'https://campus.thompson.k12.co.us/campus/'+ "images/actions/loading2.gif"; 
+						var td = doc.createElement("td");
+						td.className="detailFormField"; 
+						td.bgcolor="red";
+						td.appendChild(oi);
+						row.appendChild(td);
+				
+						td = doc.createElement("td");
+						td.className="inProcessing"; 
+						td.appendChild(doc.createTextNode("Your Request is Being Processed  ..."));
+						row.appendChild(td);
+
+						d.appendChild(tbl);					
+						doc.body.appendChild(d);
+						return d;	
+					}
+					
+					function inProgressScreen(type) 
+					{
+						var ws = frames["frameDetail"];
+						if(!ws) return true;
+						var ips = ws.document.getElementById("inProgressPane");
+						if(ips)
+						{
+							if(type)  ips.className = 'freezeOn';
+							else      ips.className = 'freezeOff';
+						}else if(type)
+							ips = addInProgressPanel(ws.document);
+					}								
+				</script></head>
+   <frameset id="main" framespacing="0" frameborder="0">
+      <frame id="frameDetail" name="frameDetail" scrolling="auto" marginwidth="0" marginheight="0" src="portal/portal.xsl?x=portal.PortalOutline&amp;lang=en&amp;mode=notices">
+   </frameset>
+</html>

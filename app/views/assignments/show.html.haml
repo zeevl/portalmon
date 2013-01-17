@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Student:
+  = @assignment.student_id
+%p
+  %b Class name:
+  = @assignment.class_name
+%p
+  %b Name:
+  = @assignment.name
+%p
+  %b Assigned:
+  = @assignment.assigned
+%p
+  %b Due:
+  = @assignment.due
+%p
+  %b Possible score:
+  = @assignment.possible_score
+%p
+  %b Score:
+  = @assignment.score
+%p
+  %b Comments:
+  = @assignment.comments
+
+= link_to 'Edit', edit_assignment_path(@assignment)
+\|
+= link_to 'Back', assignments_path

@@ -1,0 +1,328 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100%;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 8pt;
+	background: #363636 url(../../images/portal/gray_fade_bg.png) repeat-x;
+}
+#background {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: relative;
+	background: url(../../images/portal/background_swoosh.png) repeat-x -200px top;
+}
+#container {
+	position: relative;
+	width: 80%;
+	min-width: 1000px;
+	max-width: 1200px;
+	width: expression(document.body.clientWidth < 1200 ? "1000" : document.body.clientWidth > 1500 ? "1200" : "80%");  /*for IE*/
+    margin: 0 auto;
+    padding-bottom: 25px;
+    background-color: #ffffff;
+    -moz-border-radius-bottomright: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    text-align: left;
+}	
+#main {
+	overflow: auto;
+	min-height: 500px;
+	height: expression(this.scrollHeight < 500 ? "500px" : "auto");  /*for IE*/
+	width: 100%;
+}
+#content {
+	float: left;
+	overflow-x: auto;
+	overflow-y: none;
+	margin: 0 25px 25px 25px;
+	width: 75%;
+}
+
+.title { color: #000000; font-family: helvetica, arial, sans-serif; font-size: 11pt; font-weight: bold; padding: 3px 5px; border-bottom: 1pt solid #ABABAB; }
+.titlePlus1 { color: #000000; font-family: helvetica, arial, sans-serif; font-size: 13pt; font-weight: bold; padding: 3px 5px; }
+.title2 { color: #000000; font-family: helvetica, arial, sans-serif; font-size: 11pt; font-weight: bold; }
+.title3 { color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: bold; border-bottom: 1pt solid #ABABAB; }
+.title4 { color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: bold; border-bottom: 1pt solid #ABABAB; }
+.noEvents {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: normal; padding: 8px 5px; }
+.schoolComments { padding: 8px 5px; }
+.tableTitle {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 10pt; font-weight: ; background: #FFFFFF; padding: 10px 0;}
+.generalText {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: normal; background: #FFFFFF; padding: 10px 0;}
+.required { color: red;}
+
+/* Portal Tables */
+.portalTable { 
+	font-family: helvetica, arial, sans-serif;
+	margin: 10px 0 15px;
+	font-size: 8pt;
+	text-align: left;
+	border-collapse: collapse;
+}
+.portalTable thead tr th {
+	background: url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) repeat-x scroll 50% 50% #CCCCCC;
+	color: #222222;
+	font-weight: bold;
+	padding: 3px 5px;
+	font-size: 9pt;
+	line-height: 20px;
+	border-bottom: 1px solid #AAAAAA;
+	border-top: 1px solid #AAAAAA;
+	white-space: nowrap;
+}
+.portalTable thead tr th:first-child, .portalTable tfoot tr th:first-child, .portalTable tbody tr td:first-child {
+	padding-left: 10px;
+}
+.portalTable tfoot tr th {
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 9pt;
+	line-height: 20px;
+	color: #3D3D3D;
+	white-space: nowrap;
+}
+.portalTable tbody td {
+	color: #3D3D3D;
+	padding: 5px;
+	vertical-align: middle;
+	border-bottom: 1pt solid #E0E0E0;
+	border-top: 1pt solid #E0E0E0;
+}
+.portalTable thead a:link, .portalTable thead a:visited, .portalTable thead a:active { color: #000000; text-decoration: underline; font-size: 8pt; margin-left: 0px;}
+.portalTable thead a:hover { color: #000000; text-decoration: underline; font-size: 8pt; margin-left: 0px;}
+
+.portalTable a:link, .portalTable a:visited, .portalTable a:active { color: #336699; text-decoration: none; font-size: 8pt; margin-left: 0px;}
+.portalTable a:hover { color: #336699; text-decoration: underline; font-size: 8pt; margin-left: 0px;}
+
+.portalTable tfoot a:link, .portalTable tfoot a:visited, .portalTable tfoot a:active { color: #336699; text-decoration: none; font-size: 9pt; margin-left: 0px;}
+.portalTable tfoot a:hover { color: #336699; text-decoration: underline; font-size: 9pt; margin-left: 0px;}
+
+.grayText {	color: gray; }
+
+.nested { margin: 0 !important; }
+.nested td { border: none !important; margin: 0 !important; }
+.nested td:first-child { padding-left: 0 !important; }
+								
+.center { text-align: center; }
+.bold { font-weight: bold; }
+
+.scheduleHeader {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: normal; background: #E6E6E6;}
+.scheduleBody {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: normal; background: #FFFFFF;}
+.scheduleBody a:link, .scheduleBody a:visited, .scheduleBody a:active { color: #000000; text-decoration: none; font-family: helvetica, arial, sans-serif; font-size: 8pt; margin-left: 3px; }
+.scheduleBody a:hover { color: #000000; text-decoration: underline; font-family: helvetica, arial, sans-serif; font-size: 8pt; margin-left: 3px; }
+.schedNonInsHeader { color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: normal; }
+
+/* attendance */
+.child {
+	color: #808080 !important;
+	white-space: nowrap !important;
+	border: none !important;
+	padding: 2px 32px !important;
+}
+
+/* day tab */
+.excused { color: #64AF45 !important; font-weight: bold !important;}
+.unexcused { color: #EC6262 !important; font-weight: bold !important;}
+.exempt { color: #999999 !important; font-weight: bold !important;}
+.unknown { color: #EEB20F !important; font-weight: bold !important;}
+
+/* legend */
+.excusedLegend { background-color: #64AF45; }
+.unexcusedLegend { background-color: #EC6262; }
+.exemptLegend { background-color: #999999; }
+.unknownLegend { background-color: #EEB20F;  }
+
+/* jquery UI datepicker */
+.excusedDay a:link { background: #64AF45; }
+.unexcusedDay a:link { background: #EC6262; }
+.exemptDay a:link  { background: #999999; }
+.unknownDay a:link { background: #EEB20F; }
+.noEventDay a:link  { cursor: default !important; }
+
+
+.attendanceTableHeader {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: bold; background: #E6E6E6; padding:4px; }
+.attendanceRowHeader {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: normal; background: #FFFFFF; padding:4px; }
+.attendanceBody {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: normal;}
+
+.monthHeader { font-family: helvetica, arial, sans-serif; font-weight: bold; font-size: 16pt; width:80%;}
+a.monthNavigation:link, a.monthNavigation:visited, a.monthNavigation:active { color: #000000; font-family: helvetica, arial, sans-serif; font-weight: bold; font-size: 8pt; text-decoration:none; }
+.calendarDayHeaderToday { font-weight: bold;}
+.calendarTable { background-color:#003366; color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; }
+.calendarDateNumber { color:#003366; font-weight:bold; font-size:10pt; }
+.calendarDateNumberTable { position:relative; top:0px; }
+.calendarSection { font-size: 8pt; }
+.calendarStudent { font-size: 8pt; font-weight:bold; font-style:italic; padding-top: 2px; }
+.calendarLessonPlanActivity { font-size: 8pt; }
+.calendarDay { background-color: #E0E0E0; }
+.calendarDayToday { font-weight: bold; }
+.calendarDaySchoolDay { background-color: #FFFFFF; }
+.calendarDayEvent { font-family: helvetica, arial, sans-serif; font-size: 8pt; font-style: italic; padding-bottom: 5px; }
+.calendarLegend { font-family: helvetica, arial, sans-serif; font-size: 8pt; }
+.calendarDayOfWeek { text-align:center; font-weight:bold; background-color: #E0E0E0; }
+.calendarSectionCell { padding-top:0px; }
+
+
+/* Legend Styles */
+.legendFinal {border: 1px solid #5A5D94; background-color: #D2EFA9;}
+.legendInProgress {border: 1px solid #5A5D94; background-color: #FFF799;}
+.legendNotAvailable {border: 1px solid #5A5D94; background-color: #FFFFFF;}
+
+
+/* Assignments */
+.assignmentsHeader {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: bold; background: #D6D7E7;}
+.assignmentsGroup {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: normal; background: #D6D7E7;}
+.assignmentsBody {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: normal; background: #FFFFFF;}
+
+.gridTitle {font-family:helvetica, arial, sans-serif; font-size:10pt; font-weight:bold;}
+.gridTeacherDisplayName {font-family:helvetica, arial, sans-serif; font-size:8pt; font-weight:bold; color:#808080; padding-bottom: 10px;}
+
+.gridGradeExpected {background: #FFFFFF;}
+.gridFinalGrade {background: #D2EFA9;}
+.gridInProgressGrade {background: #FFF799;}
+
+.gridNotPartOfTermGPA {color: #808080;}
+.gridPartOfTermGPA {color: #000000;}
+	
+.detailFormHeader {
+	font-family: helvetica, arial, sans-serif;
+	text-align: left;
+	border-collapse: collapse;
+	background: url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) repeat-x scroll 50% 50% #CCCCCC;
+	color: #222222;
+	font-weight: bold;
+	padding: 3px 5px;
+	font-size: 9pt;
+	line-height: 20px;
+	border-bottom: 1px solid #AAAAAA;
+	border-top: 1px solid #AAAAAA;
+}
+
+.detailFormColumn {background-color:#E6E6E6; color:#000000; font-family:helvetica, arial, sans-serif; font-size:8pt; font-weight:normal; vertical-align:top;}
+.gridH2Top {border-top: 1px solid #FFFFFF; color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: bold; background: #ABABAB;}
+.gridH3 {padding-left: 3px; font-family:helvetica, arial, sans-serif; font-size:8pt; color:#000000; font-weight:normal; background-color:#F0F0F0; vertical-align:top;}
+.gridCellNormal {padding-left: 3px; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:normal; background-color:#FFFFFF; vertical-align:top;}
+
+.activityLink:link, .activityLink:visited, .activityLink:active { color: #336699; text-decoration: none; font-family: helvetica, arial, sans-serif; font-size: 8pt; padding-left: 3px; }
+.activityLink:hover { color: #336699; text-decoration: underline; font-family: helvetica, arial, sans-serif; font-size: 8pt; padding-left: 3px; }
+
+.assignmentDropped {color: #808080;}
+
+/* Activities by Date */
+.sectionH2 {color: #FFFFFF !important; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: bold; background: #808080;}
+.sectionH2white {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: bold;}
+.sectionH3 {color:#000000; font-family: helvetica, arial, sans-serif; font-size:8pt;  font-weight:bold; background-color:#F0F0F0; vertical-align:top;}
+.hr {background-color: #FFFFFF; height: 15px; }
+.hr td {border-bottom: none !important;}
+
+.messageAlert { color:#CC0033 !important; font-weight:bold; }
+
+/* Census Self Service */
+.censusFieldSet {padding: 5px;}
+
+.greyFieldSet {
+    padding: 5px;
+    background-color: #E6E6E6;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+} 
+
+.whiteFieldSet {
+    padding: 5px;
+    background-color: #FFFFFF;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    border: 1px solid #ABABAB;
+} 
+.accordion-div {
+    border-top: 1px solid #ABABAB; 
+    margin: 0px 5px; 
+    padding: 5px 0px;
+}
+
+.censusText {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: normal;}
+
+.phone1 {width: 31px;}
+.phone2 {width: 31px;}
+.phone3 {width: 38px;}
+.phone4 {width: 53px;}
+.ssn1 {width: 28px;}
+.ssn2 {width: 22px;}
+.ssn3 {width: 34px;}
+.emailField {width: 160px;}
+.zip4 {width: 33px;}
+.zip5 {width: 39px;}
+
+
+/* Fees */
+.feeTitle {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: normal; padding-left: 4px; }
+.feeFooter {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: bold; background: #FFFFFF; }
+.paymentBody {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: normal; background: #F0F0F0; padding: 4px !important; border:none !important; }
+
+
+/* posAccount */
+.accountTableHeader {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 9pt; font-weight: bold; background: #E6E6E6; padding: 4px 0;}
+.accountBody {color: #000000; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: normal;}
+
+.circle {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	color: white;
+	font-size: 8pt;
+	text-align: center;
+	background: url(../../images/portal/circle.png) no-repeat;
+}
+
+.odd { background-color: #FFFFFF; }
+.even { background-color: #F0F0F0; }
+	
+/* GRID FORM CURRICULUM TRACKER STYLE */
+.curriculumTrackerStandardColumn {padding-left: 1px;border-left:1px solid #FFFFFF; border-top:1px solid #FFFFFF;  border-bottom:1px solid #808080; border-right:1px solid #808080;font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:normal;  width:160px; height:100%; vertical-align:middle; text-align:left; background-color:#E0E0E0;}
+.curriculumTrackerColumn {padding-left: 1px;border-left:1px solid #FFFFFF; border-top:1px solid #FFFFFF;  border-bottom:1px solid #808080; border-right:1px solid #808080;font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:normal;  width:35px; height:100%; vertical-align:middle; text-align:center; background-color:#E0E0E0;}
+.onTrackColumn {padding-left: 1px;border-right:1px solid #808080; border-bottom:1px solid #808080; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:normal; width:35px; height:100%; vertical-align:middle; text-align:center; background-color:#A8FFC0;}
+.offTrackColumn {padding-left: 1px;border-right:1px solid #808080; border-bottom:1px solid #808080; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:normal; width:35px; height:100%; vertical-align:middle; text-align:center; background-color:#FFC0C0;}
+.onTrackTotalColumn {padding-left: 1px;border-right:1px solid #808080; border-bottom:1px solid #808080; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:bold;  width:35px; height:100%; vertical-align:middle; text-align:center; background-color:#A8FFC0;} 
+.offTrackTotalColumn {padding-left: 1px;border-right:1px solid #808080; border-bottom:1px solid #808080; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:bold;  width:35px; height:100%; vertical-align:middle; text-align:center; background-color:#FFC0C0;}
+.blankTrackColumn {padding-left: 1px;border-right:1px solid #808080; border-bottom:1px solid #808080; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:normal; width:35px; height:100%; vertical-align:middle; text-align:center; background-color:#FFFFFF;}
+.blankTrackTotalColumn {padding-left: 1px;border-right:1px solid #808080; border-bottom:1px solid #808080; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:bold; width:35px; height:100%; vertical-align:middle; text-align:center; background-color:#FFFFFF;}
+.totalCurriculumTrackerColumn {padding-left: 1px;border-left:1px solid #FFFFFF; border-top:1px solid #FFFFFF; border-bottom:1px solid #808080; border-right:1px solid #808080;font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:bold;  width:35px; height:100%; vertical-align:top; text-align:center; background-color:#E0E0E0;}
+.warningTrackTotalColumn {padding-left: 1px;border-right:1px solid #808080;  border-bottom:1px solid #808080; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:bold;  width:35px; height:100%; vertical-align:middle; text-align:center; background-color:#FFFFCC;}
+.warningTrackColumn {padding-left: 1px;border-right:1px solid #808080; border-bottom:1px solid #808080; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:normal; width:35px; height:100%; vertical-align:middle; text-align:center; background-color:#FFFFCC;}
+.warningCurriculumTrackerColumn {padding-left: 1px;border-left:1px solid #FFFFFF; border-top:1px solid #FFFFFF; border-bottom:1px solid #808080; border-right:1px solid #808080;font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:normal;  width:35px; height:100%; vertical-align:middle; text-align:center; background-color:#FFFFCC;}
+.onTrackProgressColumn {padding-left: 1px;border-right:1px solid #808080; border-bottom:1px solid #808080; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:bold;  width:160px; height:100%; vertical-align:middle; text-align:left; background-color:#A8FFC0;} 
+.offTrackProgressColumn {padding-left: 1px;border-right:1px solid #808080; border-bottom:1px solid #808080; font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:bold;  width:160px; height:100%; vertical-align:middle; text-align:left; background-color:#FFC0C0;}
+.curriculumTotalProgressColumn {padding-left: 1px;border-left:1px solid #FFFFFF; border-top:1px solid #FFFFFF; border-bottom:1px solid #808080; border-right:1px solid #808080;font-family:arial, helvetica, sans; font-size:8pt; color:#000000; font-weight:bold;  width:160px; height:100%; vertical-align:middle; text-align:left; background-color:#E0E0E0;}
+
+
+/* jQuery UI overrides */
+.ui-tabs .ui-tabs-nav li a { font-size: 8pt; }
+#dp .ui-datepicker { font-size: 75%; }
+.ui-datepicker-group { padding-left:1px; padding-right:1px; }
+.ui-datepicker-header { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+div.ui-datepicker-multi-3 .ui-datepicker-group { width:33%; }
+.ui-datepicker-multi{border: 1px solid #ABABAB;}
+.ui-tabs{border: 1px solid #ABABAB;}
+.ui-widget-content-dropdown { border: 1px solid #aaaaaa; background-color: #E6E6E6; z-index: 1; }
+.ui-dialog .ui-dialog-buttonpane { text-align: center; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .5px; }
+.ui-dialog .ui-dialog-buttonpane button{ display: inline-block; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: bold; position: relative; border: 1px solid #00578E; background: #00578E; color: #ffffff; -moz-border-radius:12px; border-radius: 12px; -webkit-border-radius: 12px; min-width: 60px;}
+.ui-dialog .ui-dialog-buttonpane .ui-state-hover{ display: inline-block; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: bold; position: relative; border: 1px solid #373737; background: #373737; color: #ffffff; -moz-border-radius:12px; border-radius: 12px; -webkit-border-radius: 12px; cursor: pointer; min-width: 60px;}
+.ui-dialog .ui-dialog-buttonpane .ui-state-focus{ display: inline-block; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: bold; position: relative; border: 1px solid #ABABAB; background: #FFFFFF; color: #000000; -moz-border-radius:12px; border-radius: 12px; -webkit-border-radius: 12px; min-width: 60px;}
+.ui-accordion .ui-accordion-header {font-weight: bold;}
+.ui-accordion .ui-accordion-content { padding: 0px; border: 1px solid #ABABAB; border-top: 0; position: relative; overflow: visible; display: none; zoom: 1; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: bold;}
+.ui-accordion .ui-accordion-content-active { display: block;}
+
+.ui-widget input, .ui-widget button{font-family: helvetica, arial, sans-serif; font-size: 8pt;}
+.button{ display: inline-block; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: bold !important; position: relative; padding: 2px 20px 2px 20px; border: 1px solid #00578E; background: #00578E; color: #ffffff !important; -moz-border-radius:12px; border-radius: 12px; -webkit-border-radius: 12px; min-width: 60px;}
+.button-hover{ display: inline-block; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: bold; position: relative; padding: 2px 20px 2px 20px; border: 1px solid #373737; background: #373737; color: #ffffff; -moz-border-radius:12px; border-radius: 12px; -webkit-border-radius: 12px; cursor: pointer; min-width: 60px;}
+.button-clicked{ display: inline-block; font-family: helvetica, arial, sans-serif; font-size: 8pt; font-weight: bold; position: relative; padding: 2px 20px 2px 20px; border: 1px solid #ABABAB; background: #FFFFFF; color: #000000; -moz-border-radius:12px; border-radius: 12px; -webkit-border-radius: 12px; min-width: 60px;}
+select, input, textArea{padding: 3px; background-color: #F0F0F0; border: 1px solid #CECECE; -moz-border-radius:4px; border-radius: 4px; -webkit-border-radius: 4px;}
+
+.inProcessing{font-family:helvetica,arial,sans-serif;font-size:16pt;font-weight:bold;padding:10px;text-align:center;color:green;}
+.freezeOff{visibility:hidden;display:none;position:absolute;top:-100px;left:-100px;background-color:grey;}					
+.freezeOn{position:absolute;top:0px;left:0px;visibility:visible;display:block;width:100%;height:200%;background-color:#f4f7fc;z-index:999;filter:alpha(opacity=85);-moz-opacity:0.85;opacity:0.85;padding-top:20%;text-align:center;padding-left:40px;}

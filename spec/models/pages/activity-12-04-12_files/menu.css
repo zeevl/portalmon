@@ -1,0 +1,88 @@
+#menu_div {
+	float: left;
+	width: 180px;
+}
+
+#links_div {
+	background-color: #F0F0F0;
+	border-bottom: 1px solid #ABABAB;
+	border-right: 1px solid #ABABAB;
+	padding: 20px 0 25px;
+	margin-bottom: 25px;
+}
+
+ul.menu li {
+	list-style-type: none;
+	border-bottom: 1px solid #ABABAB;
+	border-right: 1px solid #ABABAB;
+	background: #E6E6E6 url(../../images/portal/black_arrow.png) no-repeat 160px center;
+}
+
+ul.menu a:link, ul.menu a:visited, ul.menu a:active {
+	display: block;
+	color: #000000;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	padding: 5px 20px 5px 10px;
+	margin: 0;
+	text-decoration: none;
+}
+
+ul.menu a:hover {
+    background: #00578E url(../../images/portal/white_arrow.png) no-repeat 160px center;
+    text-decoration: none;
+  	color: #FFFFFF;  
+    font-family: helvetica, arial, sans-serif;
+    font-size: 9pt;
+	font-weight: bold; 
+	padding: 5px 20px 5px 10px;
+	margin: 0;	
+}
+
+ul.menu .current {
+   border-right: none;
+   background-color: #FFFFFF;
+   background-image: none;
+}
+
+ul.menu .current > a {
+   background-color: #FFFFFF;
+   color: #000000;
+}
+
+ul.menu .header {
+   font-family: helvetica, arial, sans-serif;
+   font-size: 9pt;
+   font-weight: bold;  
+   color: #FFFFFF;
+   padding: 5px 10px;
+   border-bottom: 1px solid #ABABAB;
+   border-right: 1px solid #ABABAB;
+   background: url(../../images/portal/gray_gradation_bg.png);
+}
+
+.subtext { font-size: 8pt !important; display:block; }
+
+.outlineLink:link, 
+.outlineLink:visited, 
+.outlineLink:active { 
+	display: block; 
+	color: #336699; 
+	text-decoration: none; 
+	font-size: 9pt; 
+	margin-left: 3px;  
+	font-weight: normal; 
+	padding: 5px 10px;
+}
+
+.outlineLink:hover { 
+	display: block; 
+	color: #336699; 
+	text-decoration: underline; 
+	font-size: 9pt; 
+	margin-left: 3px; 
+	font-weight: normal; 
+	padding: 5px 10px;
+}
+

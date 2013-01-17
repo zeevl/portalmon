@@ -1,0 +1,84 @@
+#header_banner {
+	height: 100px;
+	text-align: left;
+	margin: 0px 25px 40px 0px;
+}
+#studentName {
+	float: left;
+	background: url(../../images/portal/name_bg_slice.png) repeat-x;
+	color: #ffffff;
+	height: 32px;
+	padding: 8px 0 8px 125px;
+}
+#studentDroplist {
+	float: left;
+	position: relative;
+	height: 32px;
+	width: 160px;
+}
+#studentDroplist a{
+	position: absolute;
+	bottom: 0;
+}
+#userName {
+	float: right;
+	padding-top: 15px;
+	padding-right: 15px;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+}
+#home {
+	float: right;
+	background: url(../../images/portal/home.png) no-repeat;
+	height: 35px;
+	width: 40px;
+	cursor: pointer;
+	margin-right: 2px;
+}
+#signout {
+	float: right;
+	background: url(../../images/portal/sign_out.png) no-repeat center top;
+	height: 35px;
+	width: 98px;
+	cursor: pointer;
+}
+#signout a {
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding-top: 12px;
+	padding-bottom: 4px;
+	color: #ffffff; 
+	font-family: helvetica, arial, sans-serif; 
+	font-weight: bold; 
+	font-size: 8pt; 
+	text-decoration: none; 
+}
+.studentPic {
+	width: 85px;
+	z-index: 10;
+	position: absolute; left: 20px; top: 15px;
+}
+.studentName {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #ffffff;
+	font-weight: bold;
+	padding-right: 10px;
+}
+.studentDetails {
+	font-size: 8pt;
+	color: #000000;
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.hidden { position:absolute; top:0; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+/* select student and multiple enrollments dropdown */
+.fg-button { clear:left; margin:0; padding: .4em 1em; text-decoration:none !important; cursor:pointer; position: relative; text-align: center; zoom: 1; }
+.fg-button .ui-icon { position: absolute; top: 50%; margin-top: -8px; left: 50%; margin-left: -8px; }
+a.fg-button { font-family: helvetica, arial, sans-serif; font-size: 9pt; color: #00578E; font-weight: bold; }
+button.fg-button { width:auto; overflow:visible; } /* removes extra button width in IE */
+.fg-button-icon-right { padding-right: 2.1em; }
+.fg-button-icon-right .ui-icon { left: auto; right: .2em; margin-left: 0; }
