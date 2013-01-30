@@ -93,6 +93,26 @@ describe Portal do
         scores.length.should == 3
     
     end
-  end
 
+    it "correctly determines student name" do 
+      FakeWeb.register_uri(:get, %r|single|,
+        :body => read_page('activity-single.html'), 
+        :content_type => "text/html")
+
+      scores = portal.day_scores('single')
+      scores[0].student.should == "Parker"
+    end
+
+
+    it "correctly records missing assignments" do
+      FakeWeb.register_uri(:get, %r|missing|,
+          :body => read_page('missing.html'), 
+          :content_type => "text/html")
+
+        scores = portal.day_scores('missing')
+        score = scores.find { |s| s.name == "Warmup & Reflection #1" }
+        score.score.should == "0*Missing"
+        
+    end
+  end
 end

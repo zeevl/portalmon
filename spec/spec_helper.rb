@@ -36,3 +36,21 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 end
+
+#from http://stackoverflow.com/questions/3559924/rails-time-inconsistencies-with-rspec
+# Usage:
+#
+# its(:updated_at) { should be_the_same_time_as updated_at }
+#
+#
+# Will pass or fail with message like:
+#
+# Failure/Error: its(:updated_at) { should be_the_same_time_as 2.days.ago }
+# expected Tue, 07 Jun 2011 16:14:09 +0300 to be the same time as Mon, 06 Jun 2011 13:14:09 UTC +00:00
+
+
+RSpec::Matchers.define :be_the_same_time_as do |expected|
+  match do |actual|
+    expected.to_i == actual.to_i
+  end
+end

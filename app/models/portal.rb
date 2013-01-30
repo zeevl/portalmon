@@ -3,10 +3,16 @@ class Portal
 
   def initialize
     @agent = Mechanize.new
+    @baseUrl = 'https://campus.thompsonschools.org/campus/'
+  end
+
+  def get(url)
+    Rails.logger.debug "Getting #{url}"
+    return self.agent.get url
   end
 
   def login(username, password)
-    page = self.agent.get 'https://campus.thompson.k12.co.us/campus/portal/thompson.jsp'
+    page = self.get "#{@baseUrl}portal/thompson.jsp"
     
     form = page.forms.first
     form['username'] = username
@@ -20,7 +26,7 @@ class Portal
   def assignment_scores(month, year)
     scores = []
 
-    calendar = self.agent.get "https://campus.thompson.k12.co.us/campus/portal/portal.xsl?"\
+    calendar = self.get "#{@baseUrl}portal/portal.xsl?"\
                 "x=portal.PortalOutline&lang=en&context=&mode=calendarFamily&personID=&"\
                 "calendarID=&structureID=&x=portal.PortalScheduleStructure&"\
                 "x=portal.PortalLessonPlanActivity&dictionary=Day.eventType&"\
@@ -37,8 +43,11 @@ class Portal
 
   def day_scores(href)
     scores = []
-    page = self.agent.get "https://campus.thompson.k12.co.us/campus/#{href}"
+    page = self.get "#{@baseUrl}#{href}"
     
+    title = page.search(".title").text
+    student = /(.+)'s Assignments/.match(title)[1]
+
     page.search(".portalTable").each do |table|
       cells = table.search("td")
       i = 0
@@ -48,14 +57,14 @@ class Portal
         case cells[i].text 
         when "Name"
           scores.push(score) if score
-          score = Assignment.new({:name => cells[i+=1].text})
+          score = Assignment.new({:name => cells[i+=1].text, :student => student})
 
         when "Total Points Possible"
           score.possible_score = cells[i+=1].text
 
         when "Due Date"
           score.due = cells[i+=1].text
-
+          
         when "Score"
           score.score = cells[i+=1].text
 

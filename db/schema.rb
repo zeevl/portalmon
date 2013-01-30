@@ -11,19 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130112201748) do
+ActiveRecord::Schema.define(:version => 20130130233019) do
 
   create_table "assignments", :force => true do |t|
-    t.integer  "student_id"
     t.string   "class_name"
     t.string   "name"
     t.date     "assigned"
     t.date     "due"
     t.integer  "possible_score"
-    t.integer  "score"
     t.string   "comments"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "student"
+    t.integer  "household_id"
+    t.string   "score"
+  end
+
+  create_table "households", :force => true do |t|
+    t.string   "username"
+    t.string   "password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
