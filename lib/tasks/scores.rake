@@ -8,7 +8,6 @@ namespace :scores do
  task :email => :environment do
    Household.all.each { |h| h.send_scores }
  end
-
- task :default => [:update, :email]
-
 end
+
+task :scores => ["scores:update", "scores:email"]

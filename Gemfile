@@ -9,6 +9,7 @@ gem 'rails', '3.2.11'
 gem 'pg'
 gem 'mechanize'
 gem 'haml'
+gem 'thin'
 
 group :development, :test do
   gem 'sqlite3'
