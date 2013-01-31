@@ -108,6 +108,7 @@ GEM
     net-http-persistent (2.8)
     nokogiri (1.5.6)
     ntlm-http (0.1.1)
+    pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.11.4)
       coderay (~> 1.0.5)
@@ -203,6 +204,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mechanize
+  pg
   rails (= 3.2.11)
   rb-fsevent (~> 0.9.1)
   roadie

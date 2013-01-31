@@ -7,10 +7,10 @@ class Assignment < ActiveRecord::Base
 
   def self.update_scores(id, scores)
     scores.each do |score| 
+      score.household_id = id
       existing = find_existing(score)
 
       if !existing
-        score.household_id = id
         score.save      
       else
         existing.score = score.score
