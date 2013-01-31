@@ -19,7 +19,7 @@ describe Assignment do
   describe "update_scores" do
     it "adds new scores" do
       scores = [ FactoryGirl.build(:assignment) ]
-      Assignment.update_scores(scores)
+      Assignment.update_scores(0, scores)
 
       Assignment.all.length.should == 1
     end
@@ -31,7 +31,7 @@ describe Assignment do
       score2.possible_score = 10
       score2.score = 5
 
-      Assignment.update_scores([score2])
+      Assignment.update_scores(0, [score2])
       Assignment.all.length.should == 1
       Assignment.first.possible_score.should == 10
       Assignment.first.score.should == "5"
@@ -44,7 +44,7 @@ describe Assignment do
       Timecop.travel(Time.now + 1.day) do 
         # Review: this assumes only the name changes in the Factory.  Better way to do this?
         score2 = FactoryGirl.build(:assignment, name: score.name)
-        Assignment.update_scores([score2])
+        Assignment.update_scores(0, [score2])
 
         Assignment.find_existing(score2).updated_at.day.should == score.updated_at.day
       end

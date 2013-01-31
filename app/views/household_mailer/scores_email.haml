@@ -1,0 +1,15 @@
+
+%html
+  %body
+    %table
+      - scores.sort_by! { |a| a.student, a.class_name, a.due }
+      - scores.each do |s| 
+        %tr
+          %td= s.student
+          %td= s.class_name
+          %td= s.name
+          %td= s.assigned
+          %td= s.due
+          %td= s.possible_score
+          %td= s.score
+          

@@ -19,6 +19,7 @@ group :development, :test do
   gem 'terminal-notifier-guard'
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'timecop'
+  gem "awesome_print"
 end
 
 

@@ -78,10 +78,11 @@ describe Portal do
 
       scores = portal.day_scores('single')
       scores.length.should == 1
+      scores[0].class_name.should == "2060-13 Math I S1"
       scores[0].name.should == "Reflection: Common Denominators"
       scores[0].possible_score.should == 10
-      scores[0].due.should ==  "12/01/2012".to_date
-      scores[0].assigned.should == "12/01/2012".to_date
+      scores[0].due.should ==  Date.new(2012, 12, 01)
+      scores[0].assigned.should == Date.new(2012, 12, 01)
     end
 
     it "correctly parses multiple assignments" do

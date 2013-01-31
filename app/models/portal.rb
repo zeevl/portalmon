@@ -49,6 +49,8 @@ class Portal
     student = /(.+)'s Assignments/.match(title)[1]
 
     page.search(".portalTable").each do |table|
+      class_name = table.search("th").first.text
+
       cells = table.search("td")
       i = 0
       score = nil
@@ -57,19 +59,19 @@ class Portal
         case cells[i].text 
         when "Name"
           scores.push(score) if score
-          score = Assignment.new({:name => cells[i+=1].text, :student => student})
+          score = Assignment.new({:name => cells[i+=1].text, :class_name => class_name, :student => student})
 
         when "Total Points Possible"
           score.possible_score = cells[i+=1].text
 
         when "Due Date"
-          score.due = cells[i+=1].text
-          
+          score.due = Date.strptime(cells[i+=1].text, "%m/%d/%Y")
+
         when "Score"
           score.score = cells[i+=1].text
 
         when "Date Assigned"
-          score.assigned = cells[i+1].text
+          score.assigned = Date.strptime(cells[i+=1].text, "%m/%d/%Y")
         end
 
         i += 1
