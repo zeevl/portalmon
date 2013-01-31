@@ -1,15 +1,96 @@
+!!! 5
 
 %html
   %body
-    %table
-      - scores.sort_by! { |a| a.student, a.class_name, a.due }
-      - scores.each do |s| 
+    :css
+      body {
+        background-color: #fff;
+        color: #333;
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 13px;
+      }
+      h2 {
+        margin: 20px 0 10px; 
+        font-size: 20px;
+      }
+      
+      table, th, td {
+        border: 1px solid black;
+      }
+      table { 
+        border-collapse: collapse;
+        width: 90%;
+      }
+      td {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      tr:nth-child(even) { background: #ccc; }
+      tr:nth-child(odd)  { background: #fff; }
+
+      .a td { color: darkgreen; font-weight: bold; }
+      .c td, .missing td { color: darkred; font-weight: bold; }
+
+      td.center {
+        text-align: center;
+        white-space: nowrap;
+      }
+
+
+    - @scores.map { |s| s.student }.uniq.each do |student|
+      - student_scores = @scores.find_all { |s| s.student == student }
+      - student_scores.sort_by! { |s| [s.updated_at.to_formatted_s(:month_day), s.class_name] }
+      - missing = @missing.find_all { |s| s.student == student }
+      
+      - if missing.any?
+        %h2 
+          Missing Assignments for 
+          = student
+
+        %table.missing
+          %tr
+            %th Class
+            %th Assignment
+            %th Assigned
+            %th Due
+            %th Possible
+
+          - missing.each do |s|
+            %tr
+              %td= s.class_name
+              %td= s.name
+              %td.center= s.assigned.to_formatted_s(:month_day)
+              %td.center= s.due.to_formatted_s(:month_day)
+              %td.center= s.possible_score
+        
+      %h2
+        Recent Assignments for
+        = student
+
+      %table
         %tr
-          %td= s.student
-          %td= s.class_name
-          %td= s.name
-          %td= s.assigned
-          %td= s.due
-          %td= s.possible_score
-          %td= s.score
-          
+          %th Updated
+          %th Class
+          %th Assignment
+          %th Assigned
+          %th Due
+          %th Possible
+          %th Score
+          %th Pct
+
+        - student_scores.each do |s|
+          - next if s.score.include? "Missing"
+          - grade = s.score == "" ? "no-grade" : s.pct >= 90 ? "a" : s.pct >= 80 ? "b" : "c";
+
+          %tr(class=grade)
+            %td=s.updated_at.to_formatted_s(:month_day)
+            %td= s.class_name
+            %td= s.name
+            %td.center= s.assigned.to_formatted_s(:month_day)
+            %td.center= s.due.to_formatted_s(:month_day)
+            %td.center= s.possible_score
+            %td.center= s.score
+            %td.center= s.pct.to_s + '%'
+

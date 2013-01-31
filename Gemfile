@@ -16,6 +16,7 @@ group :development, :test do
   gem 'haml-rails'
   gem 'fakeweb'
   gem 'guard-rspec'
+  gem 'guard-livereload'
   gem 'terminal-notifier-guard'
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'timecop'
@@ -38,6 +39,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+# http://railsapps.github.com/rails-environment-variables.html
+gem "figaro"
+
+gem "roadie"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

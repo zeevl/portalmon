@@ -60,5 +60,19 @@ module Portalmon
     config.generators do |g|
       g.fixture_replacement :factory_girl
     end    
+    
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+        :address              => "smtp.gmail.com",
+        :port                 => 587,
+        :domain               => 'realchemy.net',
+        :user_name            => 'reports@realchemy.net',
+        :password             => 'Rep5ksu',
+        :authentication       => 'plain',
+        :enable_starttls_auto => true
+    }   
+
+    Time::DATE_FORMATS[:month_day] = "%e %b"
+    Date::DATE_FORMATS[:month_day] = "%e %b"
   end
 end

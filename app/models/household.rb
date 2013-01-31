@@ -14,6 +14,19 @@ class Household < ActiveRecord::Base
     end
   end
 
+  def send_scores
+    scores = self.assignments.where("updated_at > ?", Time.now - 2.weeks)
+    missing = self.assignments.where(["score LIKE :missing", {:missing => "%Missing"}])
+
+    if !scores.any? && !missing.any?
+      logger.info "No scores for #{:username}, skipping."
+      return 
+    end
+    
+    HouseholdMailer.scores_email(self, missing, scores).deliver
+  end
+
+
   def update_recent_scores
     @portal.login(self.username, self.password)
 

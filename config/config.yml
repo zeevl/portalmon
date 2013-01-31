@@ -1,0 +1,18 @@
+# from http://kpumuk.info/ruby-on-rails/flexible-application-configuration-in-ruby-on-rails/
+
+# NOTE: these variables can be overridden using env variables with the
+# same name
+
+defaults: &defaults
+  email_user_name: "reports@realchemy.net"
+  email_password: "???"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
