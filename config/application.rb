@@ -71,8 +71,5 @@ module Portalmon
         :authentication       => 'plain',
         :enable_starttls_auto => true
     }   
-
-    Time::DATE_FORMATS[:month_day] = "%e %b"
-    Date::DATE_FORMATS[:month_day] = "%e %b"
   end
 end
