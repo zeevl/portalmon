@@ -1,8 +1,8 @@
 class Assignment < ActiveRecord::Base
   belongs_to :houeshold
 
-  def pct 
-    ((self.score.to_f / self.possible_score.to_f) * 100.0).to_i
+  def pct     
+    self.score == "" ? nil : ((self.score.to_f / self.possible_score.to_f) * 100.0).to_i 
   end
 
   def self.update_scores(id, scores)

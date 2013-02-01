@@ -27,8 +27,8 @@
         line-height: 18px;
       }
 
-      tr:nth-child(even) { background: #ccc; }
-      tr:nth-child(odd)  { background: #fff; }
+      .even { background: #ccc; }
+      .odd  { background: #fff; }
 
       .a td { color: darkgreen; font-weight: bold; }
       .c td, .missing td { color: darkred; font-weight: bold; }
@@ -43,7 +43,8 @@
       - student_scores = @scores.find_all { |s| s.student == student }
       - student_scores.sort_by! { |s| [s.updated_at.to_formatted_s(:month_day), s.class_name, s.due.to_time.to_i * -1] }
       - missing = @missing.find_all { |s| s.student == student }
-      
+      - even = ""
+
       - if missing.any?
         %h2 
           Missing Assignments for 
@@ -58,7 +59,9 @@
             %th Possible
 
           - missing.each do |s|
-            %tr
+            - even = (even == "even" ? "odd" : "even")
+
+            %tr(class=even)
               %td= s.class_name
               %td= s.name
               %td.center= s.assigned.to_formatted_s(:month_day)
@@ -80,11 +83,13 @@
           %th Score
           %th Pct
 
+        - even = ""
         - student_scores.each do |s|
           - next if s.score.include? "Missing"
           - grade = s.score == "" ? "no-grade" : s.pct >= 90 ? "a" : s.pct >= 80 ? "b" : "c";
+          - even = (even == "even" ? "odd" : "even")
 
-          %tr(class=grade)
+          %tr(class="#{grade} #{even}")
             %td=s.updated_at.to_formatted_s(:month_day)
             %td= s.class_name
             %td= s.name
@@ -92,5 +97,5 @@
             %td.center= s.due.to_formatted_s(:month_day)
             %td.center= s.possible_score
             %td.center= s.score
-            %td.center= s.pct.to_s + '%'
+            %td.center= s.pct.to_s + "%" unless s.pct.nil?
 
