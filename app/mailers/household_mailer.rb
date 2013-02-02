@@ -5,7 +5,9 @@ class HouseholdMailer < ActionMailer::Base
     @scores = scores
     @missing = missing
 
-    mail(:to => household.email, :subject => "Assigment scores update for #{Date.today.to_formatted_s(:short)}")
+    date = DateTime.now.in_time_zone('America/Denver').to_formatted_s(:month_day)
+    mail(:to => household.email, 
+        :subject => "Assigment scores update for #{date}")
   end
   
 end

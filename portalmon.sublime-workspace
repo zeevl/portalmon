@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"ass",
+				"assigned"
+			],
+			[
+				"scores",
+				"scores"
+			],
+			[
+				"to",
+				"to_formatted_s"
+			],
+			[
+				"stud",
+				"student_scores"
+			],
+			[
 				"POST",
 				"posix_times"
 			],
@@ -82,19 +98,155 @@
 			[
 				"do",
 				"do"
-			],
-			[
-				"scores",
-				"scores"
-			],
-			[
-				"ass",
-				"assignment_scores"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "app/models/household.rb",
+			"settings":
+			{
+				"buffer_size": 1038,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/environment.rb",
+			"settings":
+			{
+				"buffer_size": 1298,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/steve/.zshrc",
+			"settings":
+			{
+				"buffer_size": 1742,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/household_controller.rb",
+			"settings":
+			{
+				"buffer_size": 228,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/mailers/household_mailer.rb",
+			"settings":
+			{
+				"buffer_size": 302,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1841,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Guardfile",
+			"settings":
+			{
+				"buffer_size": 1441,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/assignments/index.html.haml",
+			"settings":
+			{
+				"buffer_size": 732,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/assignment.rb",
+			"settings":
+			{
+				"buffer_size": 746,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/application.rb",
+			"settings":
+			{
+				"buffer_size": 3284,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "db/migrate/20130131042102_add_email.rb",
+			"settings":
+			{
+				"buffer_size": 109,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "db/schema.rb",
+			"settings":
+			{
+				"buffer_size": 1408,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/application.yml",
+			"settings":
+			{
+				"buffer_size": 333,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/portal.rb",
+			"settings":
+			{
+				"buffer_size": 2144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/models/assignment_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1610,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1220,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/initializers/time.rb",
+			"settings":
+			{
+				"buffer_size": 83,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/tasks/scores.rake",
+			"settings":
+			{
+				"buffer_size": 272,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -156,10 +308,37 @@
 	},
 	"file_history":
 	[
+		"/Users/steve/src/portalmon/app/views/household_mailer/scores_email.haml",
+		"/Users/steve/src/zaaz/audi/superbowl2013/trunk/ssh-ec2.sh",
+		"/Users/steve/src/portalmon/config/environments/production.rb",
+		"/Users/steve/src/portalmon/Gemfile",
+		"/Users/steve/src/portalmon/public/index.html",
+		"/Users/steve/src/portalmon/lib/tasks/scores.rake",
+		"/Users/steve/src/portalmon/app/views/assignments/index.html.haml",
+		"/Users/steve/src/portalmon/config/config.yml",
+		"/Users/steve/src/portalmon/db/migrate/20130130204636_create_households.rb",
+		"/Users/steve/src/portalmon/test/factories/households.rb",
+		"/Users/steve/src/portalmon/db/schema.rb",
+		"/Users/steve/src/portalmon/db/migrate/20130130233019_score_to_string.rb",
+		"/Users/steve/src/portalmon/app/mailers/household_mailer.rb",
+		"/Users/steve/src/portalmon/spec/factories/assignments.rb",
+		"/Users/steve/src/portalmon/spec/models/assignment_spec.rb",
+		"/Users/steve/src/portalmon/app/models/household.rb",
+		"/Users/steve/src/portalmon/app/models/assignment.rb",
+		"/Users/steve/src/portalmon/spec/models/household_spec.rb",
+		"/Users/steve/src/portalmon/app/models/portal.rb",
+		"/Users/steve/src/portalmon/spec/models/portal_spec.rb",
+		"/Users/steve/src/portalmon/.irbrc",
+		"/Users/steve/src/portalmon/.git/COMMIT_EDITMSG",
+		"/Users/steve/src/portalmon/.gitignore",
+		"/Users/steve/src/portalmon/spec/controllers/assignments_controller_spec.rb",
+		"/Users/steve/src/portalmon/Guardfile",
+		"/Users/steve/src/portalmon/db/migrate/20130130030406_add_references.rb",
+		"/Users/steve/src/portalmon/db/migrate/20130130025859_remove_student_id.rb",
+		"/Users/steve/src/portalmon/db/migrate/20130130025150_add_student.rb",
 		"/Users/steve/src/zaaz/audi/superbowl2013/trunk/app/index.php",
 		"/Users/steve/src/zaaz/audi/superbowl2013/trunk/exec-cmd.sh",
 		"/Users/steve/src/zaaz/audi/superbowl2013/trunk/cp-prod-ALL.sh",
-		"/Users/steve/src/zaaz/audi/superbowl2013/trunk/ssh-ec2.sh",
 		"/Users/steve/src/zaaz/audi/superbowl2013/trunk/app/youtube-ie_files/AudiofAmerica;sz=1x1;kpu=AudiofAmerica;tile=1;plat=pc;dc_dedup=1;kcr=us;kga=-1;kgg=-1;klg=en;kmyd=ad_creative_1;ord=2661239432699149.htm",
 		"/Users/steve/src/zaaz/audi/superbowl2013/trunk/cp-logs.sh",
 		"/Users/steve/src/zaaz/audi/superbowl2013/trunk/unq-votes.pl",
@@ -256,34 +435,7 @@
 		"/Users/steve/src/portalmon/spec/models/pages/activity-12-01-12.html",
 		"/Users/steve/src/portalmon/spec/models/pages/main.html",
 		"/Users/steve/src/portalmon/config/application.rb",
-		"/Users/steve/src/portalmon/Gemfile",
-		"/Users/steve/src/qireports.com/Gemfile",
-		"/Users/steve/src/qireports.com/app/views/layouts/_ga.haml",
-		"/Users/steve/src/qireports.com/app/views/layouts/application.haml",
-		"/Users/steve/src/qireports.com/public/assets/application.js",
-		"/Users/steve/src/qireports.com/config/environment.rb",
-		"/Users/steve/src/qireports.com/log/development.log",
-		"/Users/steve/src/qireports.com/config/application.rb",
-		"/Users/steve/src/qireports.com/.git/COMMIT_EDITMSG",
-		"/Users/steve/src/qireports.com/app/views/signups/new.html.haml",
-		"/Users/steve/src/qireports.com/qireports.sublime-project",
-		"/Users/steve/src/qireports.com/public/assets/application.css",
-		"/Users/steve/src/qireports.com/app/assets/stylesheets/libs.scss",
-		"/Users/steve/src/qireports.com/app/assets/stylesheets/static.css.scss",
-		"/Users/steve/src/qireports.com/app/views/static/about.haml",
-		"/Users/steve/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/Users/steve/src/qireports.com/app/assets/stylesheets/signups.css.scss",
-		"/Users/steve/src/qireports.com/app/assets/stylesheets/application.css",
-		"/Users/steve/src/qireports.com/.gitignore",
-		"/Users/steve/src/qireports.com/app/assets/stylesheets/application.css.scss",
-		"/Users/steve/src/qireports.com/tmp/cache/sass/03bb8b8616c5ca201de9798c6c115fd8a7744e06/static.css.scssc",
-		"/Volumes/SharedDocs/portaslamb/src/qireports.com/app/views/signups/new.html.haml",
-		"/Volumes/SharedDocs/portaslamb/src/qireports.com/config/routes.rb",
-		"/Users/steve/src/qireports.com/config/routes.rb",
-		"/Users/steve/src/qireports.com/spec/factories/statics.rb",
-		"/Users/steve/src/qireports.com/app/controllers/static_controller.rb",
-		"/Volumes/SharedDocs/portaslamb/src/qireports.com/app/controllers/static_controller.rb",
-		"/Users/steve/src/qireports.com/app/controllers/statics_controller.rb"
+		"/Users/steve/src/qireports.com/Gemfile"
 	],
 	"find":
 	{
@@ -302,6 +454,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"all",
+			":short",
 			"blurb",
 			"sync_server",
 			"sync_server ",
@@ -372,6 +526,8 @@
 		"regex": true,
 		"replace_history":
 		[
+			":month_day",
+			":month_day\n:month_day",
 			"exec_cmd",
 			"ssh -i ~/.ssh/audi-superbowl.pem root@",
 			"is_cached",
@@ -390,8 +546,499 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/models/household.rb",
+					"settings":
+					{
+						"buffer_size": 1038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								510,
+								510
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "config/environment.rb",
+					"settings":
+					{
+						"buffer_size": 1298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								460,
+								460
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/steve/.zshrc",
+					"settings":
+					{
+						"buffer_size": 1742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1742,
+								1742
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 179.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/household_controller.rb",
+					"settings":
+					{
+						"buffer_size": 228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								228,
+								228
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/mailers/household_mailer.rb",
+					"settings":
+					{
+						"buffer_size": 302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1841,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Guardfile",
+					"settings":
+					{
+						"buffer_size": 1441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/assignments/index.html.haml",
+					"settings":
+					{
+						"buffer_size": 732,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								240,
+								240
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/models/assignment.rb",
+					"settings":
+					{
+						"buffer_size": 746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								174,
+								174
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "config/application.rb",
+					"settings":
+					{
+						"buffer_size": 3284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3274,
+								3274
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 404.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "db/migrate/20130131042102_add_email.rb",
+					"settings":
+					{
+						"buffer_size": 109,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80,
+								80
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "db/schema.rb",
+					"settings":
+					{
+						"buffer_size": 1408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								333,
+								333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "config/application.yml",
+					"settings":
+					{
+						"buffer_size": 333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								332,
+								332
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "app/models/portal.rb",
+					"settings":
+					{
+						"buffer_size": 2144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1399,
+								1399
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "spec/models/assignment_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1610,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								182,
+								182
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "config/initializers/time.rb",
+					"settings":
+					{
+						"buffer_size": 83,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								42,
+								42
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "lib/tasks/scores.rake",
+					"settings":
+					{
+						"buffer_size": 272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -426,6 +1073,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
 	"replace":
 	{
 		"height": 64.0
@@ -436,6 +1087,214 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"email",
+				"app/views/household_mailer/scores_email.haml"
+			],
+			[
+				"house",
+				"app/models/household.rb"
+			],
+			[
+				"as",
+				"app/models/assignment.rb"
+			],
+			[
+				"em",
+				"app/views/household_mailer/scores_email.haml"
+			],
+			[
+				"",
+				"lib/tasks/scores.rake"
+			],
+			[
+				"pro",
+				"config/environments/production.rb"
+			],
+			[
+				"portal",
+				"app/models/portal.rb"
+			],
+			[
+				"scores",
+				"lib/tasks/scores.rake"
+			],
+			[
+				"rake",
+				"lib/tasks/scores.rake"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"application",
+				"config/application.rb"
+			],
+			[
+				"port",
+				"app/models/portal.rb"
+			],
+			[
+				"assign",
+				"spec/models/assignment_spec.rb"
+			],
+			[
+				"assi",
+				"app/models/assignment.rb"
+			],
+			[
+				"score",
+				"lib/tasks/scores.rake"
+			],
+			[
+				"por",
+				"app/models/portal.rb"
+			],
+			[
+				"gemfil",
+				"Gemfile"
+			],
+			[
+				"houe",
+				"app/models/household.rb"
+			],
+			[
+				"sco",
+				"app/views/household_mailer/scores_email.haml"
+			],
+			[
+				".z",
+				"/Users/steve/.zshrc"
+			],
+			[
+				"app",
+				"config/application.yml"
+			],
+			[
+				".sh",
+				"/Users/steve/.zshrc"
+			],
+			[
+				"envi",
+				"config/environment.rb"
+			],
+			[
+				"appli",
+				"config/application.rb"
+			],
+			[
+				"schem",
+				"db/schema.rb"
+			],
+			[
+				"add",
+				"db/migrate/20130131042102_add_email.rb"
+			],
+			[
+				"sc",
+				"app/views/household_mailer/scores_email.haml"
+			],
+			[
+				"mailer",
+				"app/mailers/household_mailer.rb"
+			],
+			[
+				"ho",
+				"app/models/household.rb"
+			],
+			[
+				"inde",
+				"app/views/assignments/index.html.haml"
+			],
+			[
+				"guard",
+				"Guardfile"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"mail",
+				"app/mailers/household_mailer.rb"
+			],
+			[
+				"conf",
+				"config/config.yml"
+			],
+			[
+				"env",
+				"config/environment.rb"
+			],
+			[
+				"portal_",
+				"spec/models/portal_spec.rb"
+			],
+			[
+				"porta",
+				"app/models/portal.rb"
+			],
+			[
+				"ass",
+				"app/models/assignment.rb"
+			],
+			[
+				"hous",
+				"app/mailers/household_mailer.rb"
+			],
+			[
+				".gi",
+				".gitignore"
+			],
+			[
+				"fac",
+				"spec/factories/assignments.rb"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"facto",
+				"test/factories/households.rb"
+			],
+			[
+				"hou",
+				"app/models/household.rb"
+			],
+			[
+				"househo",
+				"spec/models/household_spec.rb"
+			],
+			[
+				"create_",
+				"db/migrate/20130130204636_create_households.rb"
+			],
+			[
+				"fa",
+				"spec/factories/assignments.rb"
+			],
+			[
+				"factor",
+				"spec/factories/assignments.rb"
+			],
+			[
+				"assig",
+				"spec/controllers/assignments_controller_spec.rb"
+			],
+			[
+				"remo",
+				"db/migrate/20130130025859_remove_student_id.rb"
+			],
+			[
+				"mig",
+				"db/migrate/20130130025150_add_student.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
 			[
 				"cp-lo",
 				"cp-logs.sh"
@@ -601,10 +1460,6 @@
 				"app/vote.html"
 			],
 			[
-				"conf",
-				"app/config.php"
-			],
-			[
 				"oa",
 				"app/oauth2callback.html"
 			],
@@ -629,10 +1484,6 @@
 				"app/local-prod.php"
 			],
 			[
-				"",
-				"app/local-prod.php"
-			],
-			[
 				"lo",
 				"app/local-prod.php"
 			],
@@ -647,10 +1498,6 @@
 			[
 				"scs",
 				"app/styles/coming-soon.scss"
-			],
-			[
-				"guard",
-				"Guardfile"
 			],
 			[
 				"count",
@@ -687,10 +1534,6 @@
 			[
 				"main.cs",
 				"app/styles/main.css"
-			],
-			[
-				"inde",
-				"app/index.php"
 			],
 			[
 				"reve",
@@ -755,198 +1598,6 @@
 			[
 				"vote.php",
 				"app/vote.php"
-			],
-			[
-				"mob.c",
-				"app/styles/mob.css"
-			],
-			[
-				"mo",
-				"app/mobile.html"
-			],
-			[
-				"index",
-				"app/index.php"
-			],
-			[
-				"vote.ht",
-				"app/vote.html"
-			],
-			[
-				"twitt",
-				"app/twitter.php"
-			],
-			[
-				"tw",
-				"app/twitter.php"
-			],
-			[
-				"votecou",
-				"app/votecount.php"
-			],
-			[
-				"cache",
-				"app/cache.php"
-			],
-			[
-				"votecoun",
-				"app/votecount.php"
-			],
-			[
-				"db.p",
-				"app/db.php"
-			],
-			[
-				"complet",
-				"app/styles/vote-complete.scss"
-			],
-			[
-				"vote.pp",
-				"temp/vote.php"
-			],
-			[
-				"main.",
-				"app/scripts/main.js"
-			],
-			[
-				"vte.",
-				"app/vote.html"
-			],
-			[
-				"countdown",
-				"app/scripts/vendor/jquery.countdown.js"
-			],
-			[
-				"fonts",
-				"app/styles/fonts.scss"
-			],
-			[
-				"countdo",
-				"app/scripts/vendor/jquery.countdown.js"
-			],
-			[
-				"style",
-				"app/youtube_files/styles.css"
-			],
-			[
-				"vote.hml",
-				"app/vote.html"
-			],
-			[
-				"ote-com",
-				"app/vote-complete.html"
-			],
-			[
-				"voteco",
-				"app/styles/vote-complete.scss"
-			],
-			[
-				"twit",
-				"app/twitter.php"
-			],
-			[
-				"guardfil",
-				"Guardfile"
-			],
-			[
-				"re",
-				"readme.txt"
-			],
-			[
-				"o",
-				"app/oauth2callback.html"
-			],
-			[
-				"auth",
-				"app/scripts/goauth2.js"
-			],
-			[
-				"mob",
-				"app/styles/mob.scss"
-			],
-			[
-				"gr",
-				"Gruntfile.js"
-			],
-			[
-				"grun",
-				"Gruntfile.js"
-			],
-			[
-				"indx",
-				"app/index.html"
-			],
-			[
-				"font",
-				"app/styles/fonts.scss"
-			],
-			[
-				"votecount",
-				"app/votecount.php"
-			],
-			[
-				"in",
-				"app/index.php"
-			],
-			[
-				"index.",
-				"app/index.php"
-			],
-			[
-				"man",
-				"app/styles/main.scss"
-			],
-			[
-				"font.",
-				"app/styles/fonts.scss"
-			],
-			[
-				"fon",
-				"app/styles/fonts.scss"
-			],
-			[
-				"user",
-				"app/userfeed.html"
-			],
-			[
-				"schema",
-				"db/schema.rb"
-			],
-			[
-				"portal",
-				"app/models/portal.rb"
-			],
-			[
-				"boiler",
-				"public/less/boilerplate.less"
-			],
-			[
-				"mainl",
-				"public/less/main.less"
-			],
-			[
-				"activ",
-				"spec/models/pages/activity-12-01-12.html"
-			],
-			[
-				"login",
-				"spec/models/pages/login.html"
-			],
-			[
-				".rsp",
-				".rspec"
-			],
-			[
-				"gem",
-				"Gemfile"
-			],
-			[
-				"appli",
-				"config/application.rb"
-			],
-			[
-				"gemf",
-				"Gemfile"
 			]
 		],
 		"width": 0.0
