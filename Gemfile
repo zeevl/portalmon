@@ -10,18 +10,22 @@ gem 'pg'
 gem 'mechanize'
 gem 'haml'
 gem 'thin'
+gem 'haml-rails'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.0'
   gem "factory_girl_rails", ">= 4.1.0"
+  gem "debugger"
   
   gem 'haml-rails'
   gem 'fakeweb'
+  
   gem 'guard-rspec'
   gem 'guard-livereload'
+  gem 'rb-fsevent'
+
   gem 'terminal-notifier-guard'
-  gem 'rb-fsevent', '~> 0.9.1'
   gem 'timecop'
   gem "awesome_print"
 end
@@ -45,7 +49,6 @@ gem 'jquery-rails'
 
 # http://railsapps.github.com/rails-environment-variables.html
 gem "figaro"
-
 gem "roadie"
 
 # To use ActiveModel has_secure_password

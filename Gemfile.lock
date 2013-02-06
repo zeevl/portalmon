@@ -40,10 +40,18 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    columnize (0.3.6)
     css_parser (1.2.6)
       addressable
       rdoc
     daemons (1.1.9)
+    debugger (1.2.2)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.1.1)
+      debugger-ruby_core_source (~> 1.1.5)
+    debugger-linecache (1.1.2)
+      debugger-ruby_core_source (>= 1.1.1)
+    debugger-ruby_core_source (1.1.6)
     diff-lcs (1.1.3)
     domain_name (0.5.7)
       unf (~> 0.0.3)
@@ -200,6 +208,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   coffee-rails (~> 3.2.1)
+  debugger
   factory_girl_rails (>= 4.1.0)
   fakeweb
   figaro
@@ -211,7 +220,7 @@ DEPENDENCIES
   mechanize
   pg
   rails (= 3.2.11)
-  rb-fsevent (~> 0.9.1)
+  rb-fsevent
   roadie
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)

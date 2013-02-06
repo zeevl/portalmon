@@ -11,20 +11,38 @@ describe Portal do
 
   describe 'login' do
     before(:each) do
-      FakeWeb.clean_registry
 
-      FakeWeb.register_uri(:get, %r|campus/portal/thompson.jsp|, 
+      @hh = FactoryGirl.build(:household) 
+      @p = Portal.new
+
+      FakeWeb.clean_registry
+      FakeWeb.register_uri(:get, @hh.login_url, 
         :body => read_page('login.html'), 
         :content_type => "text/html")
     end
+
+    it "opens the log in page from the household" do
+      @hh.login_url = "http://foo/bar.html"
+
+      FakeWeb.register_uri(:get, @hh.login_url, 
+        :body => read_page('login.html'), 
+        :content_type => "text/html")
+
+      FakeWeb.register_uri(:post, %r|campus/verify.jsp|, 
+        :body => read_page('main.html'), 
+        :content_type => "text/html")
+
+      @p.login(@hh)
+
+    end
+
 
     it 'succeeds with a correct username/password' do
       FakeWeb.register_uri(:post, %r|campus/verify.jsp|, 
         :body => read_page('main.html'), 
         :content_type => "text/html")
  
-      p = Portal.new
-      expect { p.login('hjkarulf', 'Sunstone88') }.to_not raise_error
+      expect { @p.login(@hh) }.to_not raise_error
     end
 
     it 'raises error with bad u/p' do 
@@ -32,8 +50,7 @@ describe Portal do
         :status => ["302", "Moved Temporarily"],
         :location => "https://campus.thompson.k12.co.us/campus/portal/thompson.jsp?&rID=0.8130392277342011&status=error&lang=en")
  
-      p = Portal.new
-      expect { p.login('hjkarulf', 'NotMyPassword') }.to raise_error
+      expect { @p.login('hjkarulf', 'NotMyPassword') }.to raise_error
     end
   end
 

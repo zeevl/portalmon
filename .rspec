@@ -1,2 +1,2 @@
---color --tag ~integration:true
+--debug --color --tag ~integration:true
 

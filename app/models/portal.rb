@@ -1,5 +1,5 @@
 class Portal 
-  attr_reader :agent
+  attr_accessor :agent
 
   def initialize
     @agent = Mechanize.new
@@ -11,16 +11,22 @@ class Portal
     return self.agent.get url
   end
 
-  def login(username, password)
-    page = self.get "#{@baseUrl}portal/thompson.jsp"
-    
+  def login(household)
+    # page = self.get "#{@baseUrl}portal/thompson.jsp"
+    page = self.get household.login_url
+
     form = page.forms.first
-    form['username'] = username
-    form['password'] = password
+    form['username'] = household.username
+    form['password'] = household.password
   
     page = form.submit
 
     throw if page.uri.query && page.uri.query.include?('status=error')
+    
+    m = /(.+)portal\/main\.xsl.*/.match(page.uri.to_s)
+    @baseUrl = m[1] if m
+
+    page
   end
 
   def assignment_scores(month, year)
@@ -65,13 +71,15 @@ class Portal
           score.possible_score = cells[i+=1].text
 
         when "Due Date"
-          score.due = Date.strptime(cells[i+=1].text, "%m/%d/%Y")
+          val = cells[i+=1].text
+          score.due = Date.strptime(val, "%m/%d/%Y") unless val == ""
 
         when "Score"
           score.score = cells[i+=1].text
 
         when "Date Assigned"
-          score.assigned = Date.strptime(cells[i+=1].text, "%m/%d/%Y")
+          val = cells[i+=1].text
+          score.assigned = Date.strptime(val, "%m/%d/%Y") unless val == ""
         end
 
         i += 1

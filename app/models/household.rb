@@ -1,6 +1,8 @@
 class Household < ActiveRecord::Base
   has_many :assignments
-  attr_accessible :password, :username
+  has_many :students
+
+  attr_accessible :password, :username, :login_url
   
   attr_accessor :portal
 
@@ -15,20 +17,23 @@ class Household < ActiveRecord::Base
   end
 
   def send_scores
-    scores = self.assignments.where("updated_at > ?", Time.now - 2.weeks)
-    missing = self.assignments.where(["score LIKE :missing", {:missing => "%Missing"}])
+    students.each do |s|
+      scores = self.assignments.where("student = ? AND updated_at > ?", s.name, Time.now - 2.weeks)
+      missing = self.assignments.where(["student = :name AND score LIKE :missing", 
+          {:name => s.name, :missing => "%Missing"}])
 
-    if !scores.any? && !missing.any?
-      logger.info "No scores for #{:username}, skipping."
-      return 
+      if !scores.any? && !missing.any?
+        logger.info "No scores for #{s.name} (#{self.username}), skipping."
+        return 
+      end
+      
+      HouseholdMailer.scores_email(s.send_to, s.name, missing, scores).deliver
     end
-    
-    HouseholdMailer.scores_email(self, missing, scores).deliver
   end
 
 
   def update_recent_scores
-    @portal.login(self.username, self.password)
+    @portal.login(self)
 
     scores = @portal.assignment_scores Time.now.month, Time.now.year
     Assignment.update_scores(id, scores)

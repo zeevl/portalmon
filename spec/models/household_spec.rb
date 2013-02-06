@@ -9,8 +9,8 @@ describe Household do
       @household.portal = @portal
     end
 
-    it "logs in with each user name/password" do
-      @portal.should_receive(:login).with(@household.username, @household.password)
+    it "logs in with each user household" do
+      @portal.should_receive(:login).with(@household)
       @portal.stub(:assignment_scores).and_return([])
       @household.update_recent_scores 
     end
