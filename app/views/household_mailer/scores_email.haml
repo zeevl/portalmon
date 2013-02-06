@@ -93,8 +93,8 @@
             %td=s.updated_at.in_time_zone("America/Denver").to_formatted_s(:month_day)
             %td= s.class_name
             %td= s.name
-            %td.center= s.assigned.to_formatted_s(:month_day)
-            %td.center= s.due.to_formatted_s(:month_day)
+            %td.center= s.assigned.to_formatted_s(:month_day) unless s.assigned.nil?
+            %td.center= s.due.to_formatted_s(:month_day) unless s.due.nil?
             %td.center= s.possible_score
             %td.center= s.score
             %td.center= s.pct.to_s + "%" unless s.pct.nil?
